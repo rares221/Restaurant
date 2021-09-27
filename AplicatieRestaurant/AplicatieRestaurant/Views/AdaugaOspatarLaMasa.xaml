@@ -1,0 +1,28 @@
+﻿<Window x:Class="AplicatieRestaurant.Views.AdaugaOspatarLaMasa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ctx="clr-namespace:AplicatieRestaurant.ViewModels"
+        xmlns:local="clr-namespace:AplicatieRestaurant.Views"
+        mc:Ignorable="d"
+        Title="AdaugaOspatarLaMasa" Height="500" Width="400" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <ctx:AdaugaOspatarLaMasaVM/>
+    </Window.DataContext>
+    <Grid Background="SandyBrown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Content="SELECTEAZA OSPATAR" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="30" Foreground="White" FontWeight="Bold"></Label>
+        <DataGrid ItemsSource="{Binding Ospatari}" SelectedItem="{Binding OspatarSelectat}"  Grid.Row="1"  Grid.Column="0" Grid.ColumnSpan="2" Margin="20,20,20,20"></DataGrid>
+        <Button Grid.Column="0" Grid.Row="2" Content="Inapoi" Margin="50,30,50,30" Background="RosyBrown" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="White" BorderThickness="2" FontSize="12" FontWeight="Bold" x:Name="BackBtn" Click="BackBtn_Click"></Button>
+        <Button Grid.Column="1" Grid.Row="2" Content="Selecteaza" Margin="50,30,50,30" Background="RosyBrown" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="White" BorderThickness="2" FontSize="12" FontWeight="Bold" IsEnabled="{Binding Sterge}" Command="{Binding Adauga}"></Button>
+    </Grid>
+</Window>

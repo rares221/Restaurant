@@ -1,0 +1,25 @@
+﻿<Window x:Class="AplicatieRestaurant.Views.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AplicatieRestaurant.Views"
+        mc:Ignorable="d"
+        Title="Admin" Height="500" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid Background="SandyBrown">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Administrator" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="40" Foreground="White" FontWeight="Bold"></Label>
+        <Button Grid.Row="1" x:Name="ProduseBtn" Click="ProduseBtn_Click"  Margin="150,15,150,15" Content="Produse" FontSize="20" Background="RosyBrown" Foreground="White" FontWeight="Bold"></Button>
+        <Button Grid.Row="2" x:Name="OspatariBtn" Click="OspatariBtn_Click"  Margin="150,15,150,15" Content="Ospatari" FontSize="20" Background="RosyBrown" Foreground="White" FontWeight="Bold"></Button>
+        <Button Grid.Row="3" x:Name="MeseBtn" Click="MeseBtn_Click"  Margin="150,15,150,15" Content="Mese" FontSize="20" Background="RosyBrown" Foreground="White" FontWeight="Bold"></Button>
+        <Button Grid.Row="4" x:Name="BackBtn" Click="BackBtn_Click"  Margin="150,15,150,15" Content="Inapoi" FontSize="20" Background="RosyBrown" Foreground="White" FontWeight="Bold"></Button>
+        
+    </Grid>
+</Window>

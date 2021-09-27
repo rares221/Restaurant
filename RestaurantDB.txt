@@ -1,0 +1,16 @@
+insert into dbo.Rol
+values ('administrator')
+
+insert into dbo.Rol
+values ('ospatar')
+
+
+
+insert into dbo.Utilizator
+values ('Ionescu','Andrei','admin','admin',1)
+
+
+
+
+insert into dbo.Produs
+values ('Paste Carbonara',29,50)
